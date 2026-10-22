@@ -1,0 +1,58 @@
+﻿@model POOI_EF_MOZO_PIZARRO.Models.Consumidor
+
+@{
+    ViewBag.Title = "Detalle de Consumidor";
+}
+
+<h2>Detalle de Consumidor</h2>
+
+<div>
+    <h4>Consumidor</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DniCont)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DniCont)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NomCont)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomCont)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ApeCont)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ApeCont)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmailCont)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmailCont)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdPais)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdPais)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.DniCont }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

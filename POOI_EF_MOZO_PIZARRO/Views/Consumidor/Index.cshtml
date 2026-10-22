@@ -1,0 +1,64 @@
+﻿@model IEnumerable<POOI_EF_MOZO_PIZARRO.Models.Consumidor>
+
+@{
+    ViewBag.Title = "Listado";
+}
+
+<h2>Listado</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+@if (Model != null && Model.Any())
+{
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.DniCont)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NomCont)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ApeCont)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmailCont)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdPais)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DniCont)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NomCont)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ApeCont)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EmailCont)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IdPais)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.DniCont }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.DniCont }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.DniCont })
+                </td>
+            </tr>
+        }
+    </table>
+}
+else
+{
+    <p class="alert alert-warning">No hay registros</p>
+}

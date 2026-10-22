@@ -1,0 +1,66 @@
+﻿@model POOI_EF_MOZO_PIZARRO.Models.Consumidor
+
+@{
+    ViewBag.Title = "Borrar Registro";
+}
+
+<h2>Borrar Registro</h2>
+
+<h3>¿Esta seguro que quiere eliminar el registro?</h3>
+<div>
+    <h4>Consumidor</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DniCont)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DniCont)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NomCont)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomCont)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ApeCont)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ApeCont)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmailCont)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmailCont)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdPais)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdPais)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(model => model.DniCont)
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
